@@ -101,8 +101,8 @@ const {
   //--Kontak
   const vcard = 'BEGIN:VCARD\n'
   + 'VERSION:3.0\n'
-  + 'FN:Mr.Pato\n' // Nama
-  + 'ORG:Mr.Pato-Bot;\n' // Nama bot
+  + 'FN:Watson\n' // Nama
+  + 'ORG:Watson;\n' // Nama bot
   + 'TEL;type=CELL;type=VOICE;waid=447520607252:+44 7520 607252n' // Nomor bot
   + 'END:VCARD' 
   
@@ -267,17 +267,17 @@ const {
 			  if (anu.action == 'add') {
 				  num = anu.participants[0]
 				  teks = `Hola @${num.split('@')[0]}
-  Bienvenid@ a 
-  *${mdata.subject}*
+  
+  
   ────────────────
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┃──────〘  *Intro* 〙───────
-  ┃━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *Nombre* :
-  ┠⊷️ *Edad* :
-  ┠⊷️ *Lugar de nacimiento* :
-  ┠⊷️ *Género* :
-  ┗━━━━━━━━━━━━━━━━━━━━
+  
+  
+  
+  
+  
+  
+  
+  
   
   Usa ${prefix}verify para verificarte y poder usar el bot.`
 				  Lxa.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
@@ -322,10 +322,10 @@ const {
 	wait: '⏳ Espera ',
 	success: '🎉 Con exito',
 	Public: '🛡 Modo privado activado',
-	ferr: 'Lo siento ocurrio un error',
+	ferr: 'Lo sentimos, ha ocurrido un error',
 	limitend: 'El tiempo se agoto',
 	error: {
-	stick: 'Intentalo al rato :(',
+	stick: 'Intentalo denuevo',
 	Iv: 'Error en el link'
 	},
 	only: {
@@ -600,15 +600,7 @@ const {
   ┏━━━━━━━━━━━━━━━━━━━━
   ┃─────〘 Comandos 〙────
   ┃━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Simi (Teks)*
-  ┃ _Simsimi Chat_
-  ┠⊷️ *${prefix}Info*
-  ┃ _Información del bot_
-  ┠⊷️ *${prefix}Owner*
-  ┃ _Dueño del bot_
-  ┠⊷️ *${prefix}Donasi*
-  ┃ _Información de donasión_
-  ┠⊷️ *${prefix}Ping*
+  ┠⊷️ *${prefix}ping*
   ┃ _Velocidad_
   ┗━━━━━━━━━━━━━━━━━━━━
   ┏━━━━━━━━━━━━━━━━━━━━
@@ -649,98 +641,115 @@ const {
   ┠⊷️ *${prefix}Delete*
   ┃ _Eliminar mensaje del bot_
   ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 FUN 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Alay (Texto)*
-  ┃ _Font Alay_
-  ┠⊷️ *${prefix}Alay2 (Texto)*
-  ┃ _Font Alay_
-  ┠⊷️ *${prefix}Reverse (Texto)*
-  ┃ _Escribir al reves_
-  ┠⊷️ *${prefix}Hilih (Texto)*
-  ┃ _Cambiar vocales por la i_
-  ┠⊷️ *${prefix}Namae (Texto)*
-  ┃ _Nombre ninpushnameu_
-  ┠⊷️ *${prefix}Pantun*
-  ┃ _Poema al azar_
-  ┠⊷️ *${prefix}Bucin*
-  ┃ _Expreción al azar_
-  ┠⊷️ *${prefix}Bijak*
-  ┃ _Palabras de motivasión_
-  ┠⊷️ *${prefix}Chatprank (Texto1/Texto2)*
-  ┃ _Juntar palabras o fraces_
-  ┠⊷️ *${prefix}Itsme*
-  ┃ _Tu perfil_
-  ┠⊷️ *${prefix}Fml*
-  ┃ _Historias de vida_
-  ┠⊷️ *${prefix}Asupan*
-  ┃ _Cronologia_
-  ┠⊷️ *${prefix}Tagme*
-  ┃ _Mencionarte_
-  ┠⊷️ *${prefix}Fitnah (Menciona a la persona|texto1|texto2)*
-  ┃ _Mensaje falso de una persona_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 MEDIA 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}listvn*
-  ┃ _Lista de sonidos_
-  ┠⊷️ *${prefix}listimg*
-  ┃ _Lista de fotos_
-  ┠⊷️ *${prefix}liststik*
-  ┃ _Lista de sticker_
-  ┠⊷️ *${prefix}listvid*
-  ┃ _Lista de videos_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 EDITING 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Gtav (Foto)*
-  ┃ _Convierte foto al estilo Gtav_
-  ┠⊷️ *${prefix}Wanted (Foto)*
-  ┃ _Convierte foto al estilo wanted_
-  ┠⊷️ *${prefix}Drawing (Foto)*
-  ┃ _Convierte foto a dibujo_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 ANIME 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Kusonime (Nombre)*
-  ┃ _Información de animes_
-  ┠⊷️ *${prefix}Neonime (Nombre)*
-  ┃ _Información de neoanimes_
-  ┠⊷️ *${prefix}Charnime (Nombre)*
-  ┃ _Personajes de anime_
-  ┠⊷️ *${prefix}Wait*
-  ┃ _Busca información de una imagen de anime_
-  ┠⊷️ *${prefix}Anime*
-  ┃ _Imagen aleatoria de anime_
-  ┠⊷️ *${prefix}Loli*
-  ┃ _Imagen aleatoria de loli_
-  ┠⊷️ *${prefix}Neko*
-  ┃ _Imagen aleatoria de neko_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 GAME 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Tebakgambar*
-  ┃ _Adivinanza de imagen_
-  ┠⊷️ *${prefix}Caklontong*
-  ┃ _Quiz aleatorio_
-  ┠⊷️ *${prefix}Seberapagay (Nombre)*
-  ┃ _Porcentaje de gay_
-  ┠⊷️ *${prefix}Seberapabucin (Nombre)*
-  ┃ _Porcentaje de bucin_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 TOD 〙*
+*〘 Filosofía y Derecho 〙*
   ┏━━━━━━━━━━━━━━━━━━━━
   ┠⊷ *${prefix}Truth*
   ┠⊷ *${prefix}Dare*
+  ┠⊷ *Rousseau*
+  ┠⊷ *Rawls* 
+  ┠⊷ *Séneca*
+  ┠⊷ *Bentham*
+  ┠⊷ *Locke*
+  ┠⊷ *Hannah Arendt
+  ┠⊷ *Sócrates*
+  ┠⊷ *Platón*
   ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 KERANG AJAIB 〙*
+  *〘 Diccionario 1 〙*
   ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷ *${prefix}Apakah (Texto)*
-  ┠⊷ *${prefix}Bisakah (Texto)*
-  ┠⊷ *${prefix}Kapankah (Texto)*
-  ┠⊷ *${prefix}Rate (Texto)*
-  ┠⊷ *${prefix}Gantengcek (Texto)*
-  ┠⊷ *${prefix}Cantikcek (Texto)*
+  ┠⊷️ *Derecho*
+  ┃ 
+  ┠⊷️ *Derechos civiles*
+  ┃ 
+  ┠⊷️ *Derecho natural*
+  ┃ 
+  ┠⊷️ *Derecho positivo*
+  ┃ 
+  ┠⊷️ *Derecho administrativo*
+  ┃ 
+  ┠⊷️ *Derecho civil*
+  ┃ 
+  ┠⊷️ *Derecho comercial*
+  ┃ 
+  ┠⊷️ *Derecho constitucional*
+  ┃ 
+  ┠⊷️ *Derecho de familia*
+  ┃ 
+  ┠⊷️ *Derecho internacional público*
+  ┃ 
+  ┠⊷️ *Derecho laboral*
+  ┃ 
+  ┠⊷️ *Derecho penal*
+  ┃ 
+  ┠⊷️ *Derecho procesal*
+  ┃ 
+  ┠⊷️ *Derechos reales*
+  ┃ 
+  ┠⊷️ *Derecho rural*
+  ┃ 
+  ┠⊷️ *Derechos Humanos*
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┗━━━━━━━━━━━━━━━━━━━━
+  *〘 Diccionario 2 〙*
+  ┏━━━━━━━━━━━━━━━━━━━━
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┠⊷️ **
+  ┃ 
+  ┗━━━━━━━━━━━━━━━━━━━
+  *〘 MEDIA 〙* - *NO USAR*
+  ┏━━━━━━━━━━━━━━━━━━━━
+  ┠⊷️ *${prefix}listvn*
+  ┃ 
+  ┠⊷️ *${prefix}listimg*
+  ┃ 
+  ┠⊷️ *${prefix}liststik*
+  ┃ 
+  ┠⊷️ *${prefix}listvid*
+  ┃ 
   ┗━━━━━━━━━━━━━━━━━━━━
   *〘 TOOLS 〙*
   ┏━━━━━━━━━━━━━━━━━━━━
@@ -755,65 +764,21 @@ const {
   ┠⊷️ *${prefix}Timer (Hora)*
   ┠⊷️ *${prefix}Wame*
   ┃ _Link de wa.me_
-  ┠⊷️ *${prefix}Nulis (Texto)*
-  ┃ _Texto en cuaderno_
+  ┠⊷️ *${prefix}stiker*
+  ┃ _IMG o GIF a sticker_
   ┠⊷️ *${prefix}Ocr*
   ┃ _Texto en imagen_
-  ┠⊷️ *${prefix}Wait*
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 TEXT0 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Tahta (Texto)*
-  ┃ _Ex : ${prefix}Tahta Mr.pato_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 TEXTO2 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Ephoto list*
-  ┃ _Lista de ephoto_
-  ┠⊷️ *${prefix}Ephoto (code + Texto)*
-  ┃ _Ex : ${prefix}Ephoto 25 Mr.pato_
-  ┠⊷️ *${prefix}Textpro list*
-  ┃ _Lista de textpro
-  ┠⊷️ *${prefix}Textpro (code + Texto)*
-  ┃ _Ex : ${prefix}Textpro 55 Mr.pato_
+  ┠⊷️ *${prefix}play (nombre)*
+  ┃ _buscar música_
   ┗━━━━━━━━━━━━━━━━━━━━
   *〘 IMAGENES 〙*
   ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Cogan*
-  ┃ _Foto aleatoria de un hombre_
-  ┠⊷️ *${prefix}Cecan*
-  ┃ _Foto aleatoria de una mujer_
-  ┠⊷️ *${prefix}Meme*
-  ┃ _Meme aleatorio_
-  ┠⊷️ *${prefix}Twit*
-  ┃ _Twit aleatorio_
-  ┠⊷️ *${prefix}Quotes*
-  ┃ _Imagen de quotes_
   ┠⊷️ *${prefix}Wp*
   ┃ _Imagen aleatoria_
   ┠⊷️ *${prefix}Cyberpunk*
   ┃ _Imagen cyberpunk aleatoria_
   ┠⊷️ *${prefix}Img (texto)*
   ┃ _Imagen_
-  ┠⊷️ *${prefix}Google (Texto)*
-  ┃ _Buscar cosas en google_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 EDUCACIÓN 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Brainly (Pregunta)*
-  ┃ _Buscar cosas_
-  ┠⊷️ *${prefix}Wiki (Pregunta)*
-  ┃ _Buscar cosas_
-  ┠⊷️ *${prefix}Kbbi (Pregunta)*
-  ┃ _Diccionario_
-  ┠⊷️ *${prefix}Tl (Texto/code)*
-  ┃ _Traducir_
-  ┠⊷️ *${prefix}Fakta*
-  ┃ _Frase_
-  ┠⊷️ *${prefix}Kodebahasa*
-  ┃ _Codigo de idioma_
-  ┠⊷️ *${prefix}Kodenegara*
-  ┃ _Codigo de país_
   ┗━━━━━━━━━━━━━━━━━━━━
   *〘 OTRO 〙*
   ┏━━━━━━━━━━━━━━━━━━━━
@@ -821,38 +786,6 @@ const {
   ┃ _Letra de canciones_
   ┠⊷️ *${prefix}Chord (Nombre)*
   ┃ _Acordes de canciones_
-  ┠⊷️ *${prefix}Jadwaltvnow*
-  ┃ _Horario de tv_
-  ┠⊷️ *${prefix}Map (Area)*
-  ┃ _Un mapa_
-  ┠⊷️ *${prefix}Trendtwit*
-  ┃ _Tendencias de twiter_
-  ┠⊷️ *${prefix}Beritahoax*
-  ┃ _Noticias falsas_
-  ┠⊷️ *${prefix}Gplaystore*
-  ┃ _Busqueda en playstore_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 HORÓSCOPO 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Arti (Nombre)*
-  ┃ _Significado de tu nombre_
-  ┠⊷️ *${prefix}Couple (Nombre & Nombre)*
-  ┃ _Coincidencias de nombre_
-  ┠⊷️ *${prefix}Jadian (Escribir fecha)*
-  ┃ _Caracteristicas de usuario_
-  ┠⊷️ *${prefix}Weton (Escribir fecha)*
-  ┃ _Información de fecha_
-  ┠⊷️ *${prefix}Zodiak (Texto)*
-  ┃ _Signo zodiaco_
-  ┠⊷️ *${prefix}Artimimpi (Texto)*
-  ┃ _Significado de tus sueños_
-  ┗━━━━━━━━━━━━━━━━━━━━
-  *〘 TIEMPO 〙*
-  ┏━━━━━━━━━━━━━━━━━━━━
-  ┠⊷️ *${prefix}Cuaca (Área)*
-  ┃ _Información meteorológica_
-  ┠⊷️ *${prefix}Infogempa*
-  ┃ _Información de terremotos recientes_
   ┗━━━━━━━━━━━━━━━━━━━━
   *〘 DESCARGAS 〙*
   ┏━━━━━━━━━━━━━━━━━━━━
