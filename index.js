@@ -585,7 +585,7 @@ const {
   ────────────────
   〘 *BOT* 〙
   ‣ Prefijo:  *「 ${prefix} 」*
-  ‣ Yo soy: 
+  ‣ Yo soy: 𝑾𝒂𝒕𝒔𝒐𝒏
   ‣ Conección: *Baileys*
   ‣ Tiempo encencido: *${kyun(uptime)}*
   ‣ Modo: *ON*
